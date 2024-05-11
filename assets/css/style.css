@@ -1,7 +1,36 @@
+/* Add general styles */
 body {
-    background-color: aliceblue;
+    background-color: #5F5B50;
 }
-#game-area {
+#heading {
+   text-align: center;
+}
+
+/* How to play section */
+#how-to-play {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding: 20px 0;
+}
+#how-to-play button {
+    width: 80%;
+    height: 50px;
+    font-size: 20px;
+    border: 1px solid #FAD130;
+    border-radius: 20px;
+    background-color: #29250D;
+    color: #FAD130;
+}
+/* Game area section */
+
+#game-area {
+    text-align: center;
+}
+.game-box {
+    width: 90%;
+    height: 50vh;
+    background-color: #EAE3B9;
+    border: 1px solid #FAD130;
+    border-radius: 10px;
+    margin: 5px;
 }
