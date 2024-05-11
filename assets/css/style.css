@@ -1,0 +1,7 @@
+body {
+    background-color: aliceblue;
+}
+#game-area {
+    display: flex;
+    justify-content: space-evenly;
+}
