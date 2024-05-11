@@ -1,11 +1,25 @@
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 /* Add general styles */
 body {
     background-color: #5F5B50;
 }
+
 #heading {
    text-align: center;
+   color: #FAD130;
+   font-size: 35px;
+   font-weight: bold;
 }
-
+.description {
+    text-align: center;
+    color: #FAD130;
+    margin: 0 5px;
+}
 /* How to play section */
 #how-to-play {
     display: flex;
@@ -24,8 +38,11 @@ body {
 /* Game area section */
 
 #game-area {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+/* This css aligns each game mode to the center of the page*/
 .game-box {
     width: 90%;
     height: 50vh;
@@ -33,4 +50,29 @@ body {
     border: 1px solid #FAD130;
     border-radius: 10px;
     margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* This CSS makes the guess bhp h3 appear above the text input box*/
+.guess-bhp {
+    flex-direction: column;
+}
+
+/* Media queries */
+
+/* Media query: tablets and larger (768px and up) */
+
+@media screen and (min-width: 768px) {
+    .game-box {
+        max-width: 500px;
+    }
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+
+@media screen and (min-width: 992px) {
+    #game-area {
+        flex-direction: row;
+    }
 }
