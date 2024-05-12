@@ -35,24 +35,38 @@
             <div class="bhp-game game-box" aria-label="Click me to play higher or lower break horse power game">
                 <h3>Higher or lower bhp</h3>
             </div>
+            <div class="0to60-game game-box" aria-label="Click me to play higher or lower 0-60mph time game">
+                <h3>Higher or lower 0-60mph</h3>
+            </div>
             <div class="guess-bhp game-box" aria-label="Play guess the cars power game here">
                 <h3>Guess the cars power</h3>
                 <br>
-                <input type="number" name="bhp" id="guess-bhp">
-                <input type="submit" name="submit-answer" id="bhp-submit">
-            </div>
-            <div class="0to60-game game-box" aria-label="Click me to play higher or lower 0-60mph time game">
-                <h3>Higher or lower 0-60mph</h3>
+                <input type="number" name="bhp" id="guess-bhp-box">
+                <input type="submit" name="submit-answer" id="submit">
             </div>
         </section>
         <!-- Dispay current and highest score -->
         <section id="score">
-            <h2>High Score: <span id="home-high-score"></span></h2>
             <h2>Current Score: <span id="home-current-score"></span></h2>
+            <h2>High Score: <span id="home-high-score"></span></h2>
         </section>
+        <!-- Footer - displaying links to my linked in and github profiles -->
         <footer>
-            <h4>This site was built by James Burch</h4><i class="fa-brands fa-linkedin"></i><i
-                class="fa-brands fa-square-github"></i>
+            <div id="footer">
+                <div id="site-build">
+                    <h4>This site was built by James Burch</h4>
+                </div>
+                <div id="linkedin">
+                    <a href="https://www.linkedin.com/in/james-burch-16a206227/" target="_blank" rel="noopener"
+                        aria-label="Link to my linked in profile(opens in a new tab)"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div id="github">
+                    <a href="https://github.com/James-Burch" target="_blank" rel="noopener"
+                        aria-label="Link to my github profile(opens in a new tab)"><i
+                            class="fa-brands fa-square-github"></i></a>
+                </div>
+            </div>
         </footer>
     </main>
     <!-- Link JavaScript file -->
