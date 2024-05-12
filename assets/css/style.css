@@ -15,7 +15,6 @@ h2,
 h3 {
     text-transform: uppercase;
 }
-
 #submit {
     width: 50%;
     padding: 5px;
@@ -42,9 +41,10 @@ h3 {
     display: flex;
     justify-content: center;
     padding: 20px 0;
+    flex-direction: column;
+    align-items: center;
 }
-
-#how-to-play button {
+.htp-btn {
     width: 80%;
     height: 50px;
     font-size: 20px;
@@ -54,8 +54,26 @@ h3 {
     background-color: #EAE3B9;
     color: #29250D;
     max-width: 400px;
+    cursor: pointer;
 }
-
+#how-to-pay-box {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, .7);
+    border: 2px solid #FAD130;
+    border-radius: 5px;
+    color: black;
+    transform: translate(-50%, -50%);
+}
+#close-btn {
+    position: relative;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
 /* Game area section */
 
 #game-area {
