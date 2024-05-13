@@ -110,18 +110,6 @@ h3 {
     align-items: center;
     cursor: pointer;
 }
-/* This CSS makes the guess bhp h3 appear above the text input box*/
-.accel-game {
-    flex-direction: column;
-}
-#guess-bhp-box {
-    width: 50%;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 2px solid #29250D;
-    text-align: center;
-}
 /* Score section */
 #score {
     display: flex;

@@ -34,7 +34,7 @@ function showGame(gameName) {
     });
 
     // Show the content for the selected game
-    const selectedGame = document.getElementById('gameName');
+    const selectedGame = document.getElementById(gameName);
     selectedGame.style.display = "block";
 }
 

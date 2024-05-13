@@ -14,87 +14,100 @@
 <body>
     <!-- Main menu section/home page -->
     <main>
-     <section id="main-menu"> 
-        <section>
-            <div id="heading">
-                <h1>High Octane</h1>
+        <section id="main-menu">
+            <section>
+                <div id="heading">
+                    <h1>High Octane</h1>
+                </div>
+                <!-- Description of what the website is for -->
+                <div class="description">
+                    <h2>What is High Octane?</h2>
+                    <p>High Octane is a simple game for car lovers to test their knowledge of different car make and
+                        models
+                        power and performance figures.</p>
+                </div>
+            </section>
+            <!-- Explanation of how to play the 3 games -->
+            <section id="how-to-play">
+                <!-- This button is used to unhide the how to play menu-->
+                <button class="htp-btn" id="showButton" aria-label="Click me to learn how to play">How to play?</button>
+                <div id="how-to-play-box">
+                    <!-- This span allows the JS to close the how to play menu when the X is clicked -->
+                    <span id="close-btn"><i class="fa-solid fa-xmark"></i></span>
+                    <div class="htp-text">
+                        <h2>How to play:</h2>
+                        <p>To play the higher or lower games simply look at the car on the right and decide if you
+                            believe
+                            it to
+                            have more or less power or 0-60mph time than the car on the left, if you think higher select
+                            the
+                            higher button or lower select the lower button, if you are correct the game will continue
+                            and
+                            you
+                            will then have to guess if the next car is higher or lower than the last.
+                            For the game guessing the bhp simple enter a whole number between 1 and 1000 and click
+                            submit
+                            (or
+                            enter on a computer). If you are within 10bhp then you will get the answer correct, if you
+                            are
+                            further than 10bhp from the answer it will prompt you to guess higher or lower.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Game selection section -->
+            <section id="game-area">
+                <button id="game-btn" data-game="power-game" class="bhp-game game-box game-btn"
+                    aria-label="Click me to play higher or lower break horse power game">
+                    <h3>Higher or lower bhp</h3>
+                </button>
+                <button id="game-btn" data-game="topspeed-game" class="topspeed-game game-box game-btn"
+                    aria-label="Click me to play higher or lower top speed game">
+                    <h3>Higher or lower top speed</h3>
+                </button>
+                <button id="game-btn" data-game="price-game" class="price-game game-box game-btn"
+                    aria-label="Click me to play higher or lower car price game">
+                    <h3>Higher or lower price</h3>
+                </button>
+            </section>
+            <!-- Dispay current and highest score -->
+            <section id="score">
+                <h2>Current Score: <span id="home-current-score"></span></h2>
+                <h2>High Score: <span id="home-high-score"></span></h2>
+            </section>
+            <!-- Footer - displaying links to my linked in and github profiles -->
+            <footer>
+                <div id="footer">
+                    <div id="site-build">
+                        <h4>This site was built by James Burch</h4>
+                    </div>
+                    <div id="linkedin">
+                        <a href="https://www.linkedin.com/in/james-burch-16a206227/" target="_blank" rel="noopener"
+                            aria-label="Link to my linked in profile(opens in a new tab)"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <div id="github">
+                        <a href="https://github.com/James-Burch" target="_blank" rel="noopener"
+                            aria-label="Link to my github profile(opens in a new tab)"><i
+                                class="fa-brands fa-square-github"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </section>
+        <section id="game-screen">
+            <div id="power-game" class="game-content">
+                <div id="prev-car">Previous Car</div>
+                <div id="next-car">Current Car</div>
             </div>
-            <!-- Description of what the website is for -->
-            <div class="description">
-                <h2>What is High Octane?</h2>
-                <p>High Octane is a simple game for car lovers to test their knowledge of different car make and models
-                    power and performance figures.</p>
+            <div id="topspeed-game" class="game-content">
+                <div id="prev-car">Previous Car</div>
+                <div id="next-car">Current Car</div>
+            </div>
+            <div id="price-game" class="game-content">
+                <div id="prev-car">Previous Car</div>
+                <div id="next-car">Current Car</div>
             </div>
         </section>
-        <!-- Explanation of how to play the 3 games -->
-        <section id="how-to-play">
-            <!-- This button is used to unhide the how to play menu-->
-            <button class="htp-btn" id="showButton" aria-label="Click me to learn how to play">How to play?</button>
-            <div id="how-to-play-box">
-                <!-- This span allows the JS to close the how to play menu when the X is clicked -->
-                <span id="close-btn"><i class="fa-solid fa-xmark"></i></span>
-                <div class="htp-text">
-                    <h2>How to play:</h2>
-                    <p>To play the higher or lower games simply look at the car on the right and decide if you believe
-                        it to
-                        have more or less power or 0-60mph time than the car on the left, if you think higher select the
-                        higher button or lower select the lower button, if you are correct the game will continue and
-                        you
-                        will then have to guess if the next car is higher or lower than the last.
-                        For the game guessing the bhp simple enter a whole number between 1 and 1000 and click submit
-                        (or
-                        enter on a computer). If you are within 10bhp then you will get the answer correct, if you are
-                        further than 10bhp from the answer it will prompt you to guess higher or lower.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!-- Game selection section -->
-        <section id="game-area">
-            <button id="game-btn" data-game="power-game" class="bhp-game game-box game-btn" aria-label="Click me to play higher or lower break horse power game">
-                <h3>Higher or lower bhp</h3>
-            </button>
-            <button id="game-btn" data-game="topspeed-game" class="topspeed-game game-box game-btn" aria-label="Click me to play higher or lower top speed game">
-                <h3>Higher or lower top speed</h3>
-            </button>
-            <div class="accel-game game-box" aria-label="Play guess the cars 0-60mph time here">
-                <h3>Guess the cars 0-60mph time</h3>
-                <br>
-                <input type="number" name="bhp" id="guess-bhp-box">
-                <input type="submit" name="submit-answer" id="submit">
-            </div>
-        </section>
-        <!-- Dispay current and highest score -->
-        <section id="score">
-            <h2>Current Score: <span id="home-current-score"></span></h2>
-            <h2>High Score: <span id="home-high-score"></span></h2>
-        </section>
-        <!-- Footer - displaying links to my linked in and github profiles -->
-        <footer>
-            <div id="footer">
-                <div id="site-build">
-                    <h4>This site was built by James Burch</h4>
-                </div>
-                <div id="linkedin">
-                    <a href="https://www.linkedin.com/in/james-burch-16a206227/" target="_blank" rel="noopener"
-                        aria-label="Link to my linked in profile(opens in a new tab)"><i
-                            class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <div id="github">
-                    <a href="https://github.com/James-Burch" target="_blank" rel="noopener"
-                        aria-label="Link to my github profile(opens in a new tab)"><i
-                            class="fa-brands fa-square-github"></i></a>
-                </div>
-            </div>
-        </footer>
-    </section>
-    <section id="game-screen">
-        <div id="power-game" class="game-content" >
-        <div id="prev-car">Previous Car</div>
-        <div id="next-car">Current Car</div>
-        </div>
-        <div id="topspeed-game" class="game-content">This is the top speed game</div>
-    </section>
     </main>
     <!-- Link JavaScript files -->
     <script src="assets/js/script.js"></script>
