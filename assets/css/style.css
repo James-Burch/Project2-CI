@@ -88,7 +88,9 @@ h3 {
     cursor: pointer;
 }
 /* Game area section */
-
+.game-content {
+    display: none;
+}
 #game-area {
     display: flex;
     flex-direction: column;

@@ -10,7 +10,7 @@ document.getElementById('close-btn').addEventListener('click', function() {
 const mainMenu = document.getElementById('main-menu');
 const gameScreen = document.getElementById('game-screen');
 const gameButton = document.querySelectorAll('.game-btn');
-const gameContent = document.getElementsByClassName('game-content');
+const gameContent = document.querySelectorAll('.game-content');
 
 // Add event listeners for the game buttons
 gameButton.forEach(button => {
@@ -34,7 +34,8 @@ function showGame(gameName) {
     });
 
     // Show the content for the selected game
-    const selectedGame = document.getElementById('gameName')
+    const selectedGame = document.getElementById('gameName');
+    selectedGame.style.display = "block";
 }
 
 
