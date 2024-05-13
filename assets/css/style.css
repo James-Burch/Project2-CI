@@ -106,10 +106,10 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
-
 /* This CSS makes the guess bhp h3 appear above the text input box*/
-.guess-bhp {
+.accel-game {
     flex-direction: column;
 }
 #guess-bhp-box {
