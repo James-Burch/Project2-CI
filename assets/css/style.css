@@ -110,6 +110,18 @@ h3 {
     align-items: center;
     cursor: pointer;
 }
+#prev-car,
+#next-car {
+    background-image: url("") center/cover norepeat;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
 /* Score section */
 #score {
     display: flex;
@@ -163,9 +175,7 @@ a {
 }
 
 /* Highlight icon when mouse hovers */
-a:hover {
-    color: ;
-}
+
 
 /* Media queries */
 

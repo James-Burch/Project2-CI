@@ -1,5 +1,5 @@
 //This file contains all of the cars information
-const searchCars = [
+var searchCars = [
     { car: "Ferrari SF90", carSpeed: "211", carAccel: "2.5", carPower: "989", image: "assets/images/ferrarisf90.jpeg" },
     { car: "Lamborghini Aventador SVJ", carSpeed: "217", carAccel: "2.8", carPower: "759", image: "assets/images/lambosvj.jpeg" },
     { car: "Porsche 911 GT2 RS", carSpeed: "211", carAccel: "2.7", carPower: "690", image: "assets/images/911gt2rs.jpeg" },
