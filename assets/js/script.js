@@ -70,15 +70,48 @@ function displayCar(car, carElement) {
 function updateScore() {
     document.getElementById('score').textContent = `Score: ${score}`;
 }
-
 // Create start game function
-
 function startGame() {
     displayCar(cars[prevCar],document.getElementById('prev-car'));
     displayCar(cars[nextCar],document.getElementById('next-car'));
     updateScore();
 }
-
+/**
+ * The following code ensure when either the higher or lower button is clicked,
+ * The 2 power values are compared to see if the users input is correct,
+ * It then tells the game to carry on if correct or end if incorrect answer is given
+ */
+document.getElementById('higher-btn').addEventListener('click', () => {
+    if (Number(cars[nextCar].carPower) > Number(cars[prevCar].carPower)){
+        score++;
+        prevCar = nextCar;
+        nextCar = getRandomCarExcluding(prevCar);
+        updateGame();
+    } else {
+        alert('wrong');
+        // wrongAnswer();
+    }
+});
+document.getElementById('lower-btn').addEventListener('click', () => {
+    if (Number(cars[nextCar].carPower) < Number(cars[prevCar].carPower)){
+        score++;
+        prevCar = nextCar;
+        nextCar = getRandomCarExcluding(prevCar);
+        updateGame();
+    } else {
+        alert('wrong');
+        // wrongAnswer();
+    }
+});
+/**
+ * Create the update game function to move the nextCar to the prevCar position on screen,
+ * Then randomly select a new car to be input into the nextCar element
+ */
+function updateGame() {
+    displayCar(cars[prevCar], document.getElementById('prev-car'));
+    displayCar(cars[nextCar], document.getElementById('next-car'));
+    updateScore();
+}
 
 
 startGame();
