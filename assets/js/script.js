@@ -63,12 +63,22 @@ function displayCar(car, carElement) {
     const carPower = carElement.querySelector('.overlay p:nth-child(2)');
 
     carImg.src = car.image;
-    carName.textContent = `Name: ${car.car}`;
-    carPower.textContent = carElement.id === 'prev-car' ? `Power: ${car.carPower}` : 'Power: ?';
+    carName.textContent = `${car.car}`;
+    carPower.textContent = carElement.id === 'prev-car' ? `Power: ${car.carPower}` : 'Power: XXXX';
 }
 // Create function to update the score
 function updateScore() {
     document.getElementById('score').textContent = `Score: ${score}`;
+}
+/**
+ * Create the update game function to move the nextCar to the prevCar position on screen,
+ * Then randomly select a new car to be input into the nextCar element
+ */
+function updateGame() {
+    displayCar(cars[prevCar], document.getElementById('prev-car'));
+    displayCar(cars[nextCar], document.getElementById('next-car'));
+    updateScore();
+    console.log(updateScore);
 }
 // Create start game function
 function startGame() {
@@ -103,16 +113,6 @@ document.getElementById('lower-btn').addEventListener('click', () => {
         // wrongAnswer();
     }
 });
-/**
- * Create the update game function to move the nextCar to the prevCar position on screen,
- * Then randomly select a new car to be input into the nextCar element
- */
-function updateGame() {
-    displayCar(cars[prevCar], document.getElementById('prev-car'));
-    displayCar(cars[nextCar], document.getElementById('next-car'));
-    updateScore();
-}
-
 
 startGame();
 
