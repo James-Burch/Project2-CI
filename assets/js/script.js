@@ -1,15 +1,12 @@
 
 //DOM elements for the game screen
-const prevCar = document.getElementById("prev-car");
 const prevCarName = document.getElementById("prev-car-name");
 const prevCarPower = document.getElementById("prev-car-power");
-const nextCar = document.getElementById("next-car");
 // DOM elements for deciding which game to open
 const mainMenu = document.getElementById("main-menu");
 const gameScreen = document.getElementById("game-screen");
 const gameButton = document.querySelectorAll(".game-btn");
 const gameContent = document.querySelectorAll(".game-content");
-
 // JS Code to open and close the how to play menu
 document.getElementById('showButton').addEventListener('click', function() {
     document.getElementById('how-to-play-box').style.display = 'block';
@@ -17,43 +14,6 @@ document.getElementById('showButton').addEventListener('click', function() {
 document.getElementById('close-btn').addEventListener('click', function() {
     document.getElementById('how-to-play-box').style.display = 'none';
 });
-
-
-let score = 0;
-let prevCar = getRandomCar();
-let nextCar = getRandomCarExcluding(prevCar);
-// Generate random number
-function getRandomCar() {
-    return Math.floor(Math.random() * searchCars.length);
- }
-// Ensure the same car is not picked twice in a row
-function getRandomCarExcluding(excludeCar) {
-    let excluding;
-    do {
-        excluding = getRandomCar();
-    } while (excluding === getRandomCar());
-    return excluding;
-} 
-// Displays the cars image and details
-function displayCar() {
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Function to decide which game has been clicked and what to display
 function showGame(gameName) {
     // Remove the main menu
@@ -78,6 +38,66 @@ gameButton.forEach(button => {
         showGame(gameName);
     });
 }); 
+
+
+
+let score = 0;
+let prevCar = getRandomCar();
+let nextCar = getRandomCarExcluding(prevCar);
+// Generate random number
+function getRandomCar() {
+    return Math.floor(Math.random() * cars.length);
+ }
+// Ensure the same car is not picked twice in a row
+function getRandomCarExcluding(excludeCar) {
+    let car;
+    do {
+        car = getRandomCar();
+    } while (car === excludeCar);
+    return car;
+}
+// Displays the cars image and details
+function displayCar(car, carElement) {
+    const carName = carElement.querySelector('.overlay p:nth-child(1)');
+    const carImg = carElement.querySelector('img');
+    const carPower = carElement.querySelector('.overlay p:nth-child(2)');
+
+    carImg.src = car.image;
+    carName.textContent = `Name: ${car.car}`;
+    carPower.textContent = carElement.id === 'prev-car' ? `Power: ${car.carPower}` : 'Power: ?';
+}
+// Create function to update the score
+function updateScore() {
+    document.getElementById('score').textContent = `Score: ${score}`;
+}
+
+// Create start game function
+
+function startGame() {
+    displayCar(cars[prevCar],document.getElementById('prev-car'));
+    displayCar(cars[nextCar],document.getElementById('next-car'));
+    updateScore();
+}
+
+
+
+startGame();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
