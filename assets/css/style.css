@@ -114,6 +114,7 @@ button:hover {
     align-items: center;
     cursor: pointer;
 }
+
 .overlay {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.4);
@@ -145,6 +146,7 @@ margin: 80px;
     font-weight: 600;
     font-size: 30px;
 }
+/* Game image styling */
 #prev-car,
 #next-car {
     display: flex;
@@ -178,7 +180,25 @@ margin: 80px;
 #score div {
     padding: 5px 0;
 }
-
+#game-end-menu {
+    display: none;
+}
+.game-end-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    position: absolute;
+}
+#play-again-btn,
+#main-menu-btn {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+    font-size: 30px;
+}
 /* Footer */
 footer {
     padding-top: 50px;
