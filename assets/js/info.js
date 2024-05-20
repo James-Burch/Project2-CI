@@ -44,3 +44,5 @@ const cars = [
     { car: "Koenigsegg CCX", carSpeed: "245", carPower: "806", carPrice: "695000", image: "assets/images/koenigseggccx.jpeg" },
     { car: "Aston Martin DB11 AMR", carSpeed: "208", carPower: "630", carPrice: "241000", image: "assets/images/db11amr.jpeg" }
 ];
+
+
