@@ -143,6 +143,7 @@ button:hover {
 margin: 80px;
 }
 .overlay > p {
+    text-align: center;
     font-weight: 600;
     font-size: 30px;
 }
@@ -184,11 +185,22 @@ margin: 80px;
     display: none;
 }
 .game-end-menu {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 100;
-    position: absolute;
+    flex-direction: column;
+}
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
 }
 #play-again-btn,
 #main-menu-btn {

@@ -45,13 +45,21 @@ gameButton.forEach(button => {
  * */
  
 
-// New start game code
-document.getElementById('game-btn').addEventListener('click', () => {
-    startGame();
-})
+// New start game code, one for each game mode
+document.getElementById('game-btn-bhp').addEventListener('click', () => {
+    showGame(1);
+});
+document.getElementById('game-btn-speed').addEventListener('click', () => {
+    showGame(2);
+});
+document.getElementById('game-btn-price').addEventListener('click', () => {
+    showGame(3);
+});
+
 let score = 0;
 let prevCar = getRandomCar();
 let nextCar = getRandomCarExcluding(prevCar);
+let currentGame = 1;
 // Generate random number
 function getRandomCar() {
     return Math.floor(Math.random() * cars.length);
@@ -64,19 +72,40 @@ function getRandomCarExcluding(excludeCar) {
     } while (car === excludeCar);
     return car;
 }
-// Displays the cars image and details
+// Displays BHP game car details
 function displayCar(car, carElement) {
     const carName = carElement.querySelector('.overlay p:nth-child(1)');
     const carImg = carElement.querySelector('img');
-    const carPower = carElement.querySelector('.overlay p:nth-child(2)');
+    const carData = carElement.querySelector('.overlay p:nth-child(2)');
 
     carImg.src = car.image;
     carName.textContent = `${car.car}`;
-    carPower.textContent = carElement.id === 'prev-car' ? `Power: ${car.carPower}` : 'Power: ?';
+    if (carElement.id === 'prev-car') {
+        if (currentGame === 1) {
+            carData.textContent = `Power: ${car.carPower}`;
+        } else if (currentGame === 2) {
+            carData.textContent = `Top Speed: ${car.carSpeed}`;
+        } else {
+            carData.textContent = `Price (from new): ${car.carPrice}`;
+        }
+    } else {
+        if (currentGame === 1) {
+            carData.textContent = 'Power: ?';
+        } else if (currentGame === 2) {
+            carData.textContent = 'Top Speed: ?';
+        } else {
+            carData.textContent = 'Price (from new): ?';
+        }
+    }
 }
 // Create function to update the score
 function updateScore() {
     document.getElementById('score').textContent = `Score: ${score}`;
+}
+// Decide which game has started
+function showGame(gameNumber) {
+    currentGame = gameNumber;
+    startGame();
 }
 /**
  * Create the update game function to move the nextCar to the prevCar position on screen,
@@ -90,7 +119,7 @@ function updateGame() {
 }
 // Create start game function
 function startGame() {
-    let score = 0;
+    score = 0;
     let prevCar = getRandomCar();
     let nextCar = getRandomCarExcluding(prevCar);
     displayCar(cars[prevCar], document.getElementById('prev-car'));
@@ -109,6 +138,7 @@ function endGame() {
 function exitToMainMenu() {
     mainMenu.style.display = 'block';
     gameScreen.style.display = 'none';
+    score = 0;
 }
 /**
  * The following code ensure when either the higher or lower button is clicked,
@@ -116,7 +146,9 @@ function exitToMainMenu() {
  * It then tells the game to carry on if correct or end if incorrect answer is given
  */
 document.getElementById('higher-btn').addEventListener('click', () => {
-    if (Number(cars[nextCar].carPower) > Number(cars[prevCar].carPower)) {
+    
+    if (currentGame === 1) {
+        if (Number(cars[nextCar].carPower) > Number(cars[prevCar].carPower)) {
         score++;
         prevCar = nextCar;
         nextCar = getRandomCarExcluding(prevCar);
@@ -124,9 +156,29 @@ document.getElementById('higher-btn').addEventListener('click', () => {
     } else {
         endGame();
     }
+} else if (currentGame === 2) {
+    if (Number(cars[nextCar].carSpeed) > Number(cars[prevCar].carSpeed)) {
+    score++;
+    prevCar = nextCar;
+    nextCar = getRandomCarExcluding(prevCar);
+    updateGame();
+} else {
+    endGame();
+}
+} else {
+    if (Number(cars[nextCar].carPrice) > Number(cars[prevCar].carPrice)) {
+        score++;
+        prevCar = nextCar;
+        nextCar = getRandomCarExcluding(prevCar);
+        updateGame();
+    } else {
+        endGame();
+    }
+} 
 });
 document.getElementById('lower-btn').addEventListener('click', () => {
-    if (Number(cars[nextCar].carPower) < Number(cars[prevCar].carPower)) {
+    if (currentGame === 1) {
+        if (Number(cars[nextCar].carPower) < Number(cars[prevCar].carPower)) {
         score++;
         prevCar = nextCar;
         nextCar = getRandomCarExcluding(prevCar);
@@ -134,6 +186,25 @@ document.getElementById('lower-btn').addEventListener('click', () => {
     } else {
         endGame();
     }
+} else if (currentGame === 2) {
+    if (Number(cars[nextCar].carSpeed) < Number(cars[prevCar].carSpeed)) {
+        score++;
+        prevCar = nextCar;
+        nextCar = getRandomCarExcluding(prevCar);
+        updateGame();
+    } else {
+        endGame();
+    }
+} else {
+    if (Number(cars[nextCar].carPrice) < Number(cars[prevCar].carPrice)) {
+        score++;
+        prevCar = nextCar;
+        nextCar = getRandomCarExcluding(prevCar);
+        updateGame();
+    } else {
+        endGame();
+    }
+}
 });
 // Add event listeners to the end game screen
 document.getElementById('play-again-btn').addEventListener('click', () => {

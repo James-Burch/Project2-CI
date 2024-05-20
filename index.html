@@ -57,15 +57,15 @@
             </section>
             <!-- Game selection section -->
             <section id="game-area">
-                <button id="game-btn" data-game="power-game" class="bhp-game game-box game-btn"
+                <button id="game-btn-bhp" data-game="power-game" class="bhp-game game-box game-btn"
                     aria-label="Click me to play higher or lower break horse power game">
                     <h3>Higher or lower bhp</h3>
                 </button>
-                <button id="game-btn" data-game="topspeed-game" class="topspeed-game game-box game-btn"
+                <button id="game-btn-speed" data-game="topspeed-game" class="topspeed-game game-box game-btn"
                     aria-label="Click me to play higher or lower top speed game">
                     <h3>Higher or lower top speed</h3>
                 </button>
-                <button id="game-btn" data-game="price-game" class="price-game game-box game-btn"
+                <button id="game-btn-price" data-game="price-game" class="price-game game-box game-btn"
                     aria-label="Click me to play higher or lower car price game">
                     <h3>Higher or lower price</h3>
                 </button>
@@ -94,33 +94,35 @@
                 </div>
             </footer>
         </section>
-    <section class="game-screen" id="game-screen">
-        <section id="prev-car">
-            <img src="" alt="Car image">
-            <div class="overlay">
-                <!-- Name of the car will be inserted here when the game is started -->
-                <p></p>
-                <!-- The power of the selected car will display here when the game is started -->
-                <p class="power">Power: </p>
-            </div>
+        <section class="game-screen" id="game-screen">
+            <section id="prev-car">
+                <img src="" alt="Car image">
+                <div class="overlay">
+                    <!-- Name of the car will be inserted here when the game is started -->
+                    <p></p>
+                    <!-- The power of the selected car will display here when the game is started -->
+                    <p class="power"></p>
+                </div>
+            </section>
+            <p id="score">Score: 0</p>
+            <section id="next-car">
+                <img src="" alt="Car image">
+                <div class="overlay">
+                    <p></p>
+                    <p class="power"></p>
+                    <button id="higher-btn">Higher</button>
+                    <button id="lower-btn">Lower</button>
+                </div>
+            </section>
         </section>
-        <p id="score">Score: 0</p>
-        <section id="next-car">
-            <img src="" alt="Car image">
-            <div class="overlay">
-                <p>Name: </p>
-                <p class="power">Power: ?</p>
-                <button id="higher-btn">Higher</button>
-                <button id="lower-btn">Lower</button>
+        <!-- Wrong answer menu to access main menu or play again -->
+        <nav id="game-end-menu">
+            <div class="overlay-menu">
+                <p id="final-score"></p>
+                <button id="play-again-btn">Play Again</button>
+                <button id="main-menu-btn">Main Menu</button>
             </div>
-        </section>
-    </section>
-    <!-- Wrong answer menu to access main menu or play again -->
-    <nav id="game-end-menu" class="game-end-menu">
-        <p id="final-score"></p>
-        <button id="play-again-btn">Play Again</button>
-        <button id="main-menu-btn">Main Menu</button>
-    </nav>
+        </nav>
     </main>
     <!-- Link JavaScript files -->
     <script src="assets/js/info.js"></script>
