@@ -181,6 +181,12 @@ margin: 80px;
 #score div {
     padding: 5px 0;
 }
+#game-end-img {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+}
 #game-end-menu {
     display: none;
 }
@@ -191,6 +197,8 @@ margin: 80px;
     justify-content: center;
     z-index: 100;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 .overlay-menu {
     background-color: rgba(0, 0, 0, 0.4);
@@ -210,6 +218,10 @@ margin: 80px;
     border: 1px solid white;
     border-radius: 30px;
     font-size: 30px;
+    margin-top: 5px;
+}
+#final-score {
+    font-size: 40px;
 }
 /* Footer */
 footer {
@@ -274,8 +286,4 @@ a {
 
 @media screen and (min-width: 992px) {
 
-    /* Display game selection boxes in a row on larger screen sizes */
-    #game-area {
-        flex-direction: row;
-    }
 }
