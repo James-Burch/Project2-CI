@@ -1,7 +1,3 @@
-
-//DOM elements for the game screen
-const prevCarName = document.getElementById("prev-car-name");
-const prevCarPower = document.getElementById("prev-car-power");
 // DOM elements for deciding which game to open
 const mainMenu = document.getElementById("main-menu");
 const gameScreen = document.getElementById("game-screen");
@@ -9,6 +5,7 @@ const gameButton = document.querySelectorAll(".game-btn");
 const gameContent = document.querySelectorAll(".game-content");
 const gameMenu = document.getElementById('game-end-menu');
 const finalScore = document.getElementById('final-score');
+const highScoreDisplay = document.getElementById('high-score');
 // JS Code to open and close the how to play menu
 document.getElementById('showButton').addEventListener('click', function () {
     document.getElementById('how-to-play-box').style.display = 'block';
@@ -16,35 +13,6 @@ document.getElementById('showButton').addEventListener('click', function () {
 document.getElementById('close-btn').addEventListener('click', function () {
     document.getElementById('how-to-play-box').style.display = 'none';
 });
-/**
- * Commented out whilst I write new code for this function
- * Function to decide which game has been clicked and what to display
-function showGame(gameName) {
-    // Remove the main menu
-    mainMenu.style.display = "none";
-
-    // Show the game screen selected
-    gameScreen.style.display = "block";
-
-    // Keep other games hidden
-    gameContent.forEach(content => {
-        content.style.display = "none";
-    });
-
-    // Show the content for the selected game
-    const selectedGame = document.getElementById(gameName);
-    selectedGame.style.display = 'block';
-}
-// Add event listeners for the game buttons
-gameButton.forEach(button => {
-    button.addEventListener("click", () => {
-        const gameName = button.getAttribute("data-game");
-        showGame(gameName);
-    });
-});
- * */
- 
-
 // New start game code, one for each game mode
 document.getElementById('game-btn-bhp').addEventListener('click', () => {
     showGame(1);
@@ -57,8 +25,11 @@ document.getElementById('game-btn-price').addEventListener('click', () => {
 });
 
 let score = 0;
-let prevCar = getRandomCar();
-let nextCar = getRandomCarExcluding(prevCar);
+let prevCar;
+let nextCar;
+let highScore = 0;
+// let prevCar = getRandomCar();
+// let nextCar = getRandomCarExcluding(prevCar);
 let currentGame = 1;
 // Generate random number
 function getRandomCar() {
@@ -72,7 +43,7 @@ function getRandomCarExcluding(excludeCar) {
     } while (car === excludeCar);
     return car;
 }
-// Displays BHP game car details
+// Displays the correct game depending on which one is selected in the main menu
 function displayCar(car, carElement) {
     const carName = carElement.querySelector('.overlay p:nth-child(1)');
     const carImg = carElement.querySelector('img');
@@ -98,7 +69,7 @@ function displayCar(car, carElement) {
         }
     }
 }
-// Create function to update the score
+// Update the score display
 function updateScore() {
     document.getElementById('score').textContent = `Score: ${score}`;
 }
@@ -120,24 +91,35 @@ function updateGame() {
 // Create start game function
 function startGame() {
     score = 0;
-    let prevCar = getRandomCar();
-    let nextCar = getRandomCarExcluding(prevCar);
+    prevCar = getRandomCar();
+    nextCar = getRandomCarExcluding(prevCar);
     displayCar(cars[prevCar], document.getElementById('prev-car'));
     displayCar(cars[nextCar], document.getElementById('next-car'));
     updateScore();
     mainMenu.style.display = 'none';
     gameScreen.style.display = 'block';
     gameMenu.style.display = 'none';
+
+    // Display the highscore from local storage
+    highScore = localStorage.getItem('highScore') || 0;
+    highScoreDisplay.textContent = `High Score: ${highScore}`;
 }
 
 function endGame() {
     finalScore.textContent = `Final Score: ${score}`;
     gameMenu.style.display = 'block';
     gameScreen.style.display = 'none';
+    // Update the high score if the final score is higher
+    if (score > highScore) {
+        highScore = score;
+        localStorage.setItem('highScore', highScore);
+        highScoreDisplay.textContent = `High Score: ${highScore}`;
+    }
 }
 function exitToMainMenu() {
     mainMenu.style.display = 'block';
     gameScreen.style.display = 'none';
+    gameMenu.style.display = 'none';
     score = 0;
 }
 /**
@@ -213,25 +195,5 @@ document.getElementById('play-again-btn').addEventListener('click', () => {
 document.getElementById('main-menu-btn').addEventListener('click', () => {
     exitToMainMenu();
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
