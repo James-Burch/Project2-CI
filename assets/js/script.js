@@ -110,7 +110,7 @@ function endGame() {
     gameMenu.style.display = 'block';
     gameScreen.style.display = 'none';
     // Update the high score if the final score is higher
-    if (score > highScore) {
+    if (score <= highScore) {
         highScore = score;
         localStorage.setItem('highScore', highScore);
         highScoreDisplay.textContent = `High Score: ${highScore}`;
