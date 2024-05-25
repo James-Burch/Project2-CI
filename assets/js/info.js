@@ -1,7 +1,7 @@
 //This file contains all of the cars information
 const cars = [
     { car: "Ferrari SF90", carSpeed: "211", carPower: "989", carPrice: "507000", image: "assets/images/ferrarisf90.jpeg" },
-    { car: "Lamborghini Aventador SVJ", carSpeed: "217", carPower: "759", carPrice: "517770", image: "assets/images/lambosvj.jpeg" },
+    { car: "Lamborghini Aventador SVJ", carSpeed: "217", carPower: "759", carPrice: "517770", image: "assets/images/lamborghinisvj.avif" },
     { car: "Porsche 911 GT2 RS", carSpeed: "211", carPower: "690", carPrice: "293200", image: "assets/images/911gt2rs.jpeg" },
     { car: "McLaren 720S", carSpeed: "212", carPower: "710", carPrice: "299000", image: "assets/images/mclaren720.jpeg" },
     { car: "Bugatti Chiron Super Sport 300+", carSpeed: "304", carPower: "1578", carPrice: "3850000", image: "assets/images/bugattichironss300.jpeg" },
@@ -16,7 +16,7 @@ const cars = [
     { car: "Bugatti Veyron Super Sport", carSpeed: "268", carPower: "1200", carPrice: "2400000", image: "assets/images/bugattiveyronss.jpeg" },
     { car: "Koenigsegg Agera RS", carSpeed: "278", carPower: "1160", carPrice: "2700000", image: "assets/images/agerars.jpeg" },
     { car: "Aston Martin Vulcan", carSpeed: "225", carPower: "800", carPrice: "2300000", image: "assets/images/astonmvulcan.jpeg" },
-    { car: "Rimac Nevera", carSpeed: "258", carPower: "1914", carPrice: "2200000", image: "assets/images/rimacnevera.jpeg" },
+    { car: "Rimac Nevera", carSpeed: "258", carPower: "1914", carPrice: "2200000", image: "assets/images/rimacnevera.avif" },
     { car: "Pagani Zonda HP Barchetta", carSpeed: "220+", carPower: "800", carPrice: "17000000", image: "assets/images/paganizondahp.jpeg" },
     { car: "Ferrari F8 Tributo", carSpeed: "211", carPower: "710", carPrice: "276550", image: "assets/images/f8tributo.jpeg" },
     { car: "Lamborghini Sian", carSpeed: "217", carPower: "819", carPrice: "3600000", image: "assets/images/lambosian.jpeg" },
@@ -25,7 +25,7 @@ const cars = [
     { car: "Bugatti Centodieci", carSpeed: "236", carPower: "1600", carPrice: "9000000", image: "assets/images/bugatticentodieci.jpeg" },
     { car: "Koenigsegg Regera", carSpeed: "255", carPower: "1500", carPrice: "2100000", image: "assets/images/koenigseggregera.jpeg" },
     { car: "Aston Martin One-77", carSpeed: "220", carPower: "750", carPrice: "1800000", image: "assets/images/astoneone-77.jpeg" },
-    { car: "Rimac Concept_One", carSpeed: "221", carPower: "1224", carPrice: "980000", image: "assets/images/rimacc1.jpeg" },
+    { car: "Rimac Concept_One", carSpeed: "221", carPower: "1224", carPrice: "980000", image: "assets/images/rimacconcept1.jpeg" },
     { car: "Pagani Huayra Roadster BC", carSpeed: "230", carPower: "800", carPrice: "3500000", image: "assets/images/paganihuayra.jpeg" },
     { car: "Ferrari 488 Pista", carSpeed: "211", carPower: "720", carPrice: "331000", image: "assets/images/ferrari488pista.jpeg" },
     { car: "Lamborghini Veneno", carSpeed: "221", carPower: "750", carPrice: "4500000", image: "assets/images/lamboveneno.jpeg" },
