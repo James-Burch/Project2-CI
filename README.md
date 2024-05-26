@@ -67,4 +67,28 @@ The score area of the game screen uses javascript code to update when the user i
  - Main menu: This button has an event listener attached so that when the button is clicked it activates the code to display the main menu, end the game and if the final score is more than the high score it will update the high score and display the users new high score.
 - The screen also displays the final score from the game that the user has just played.
 ![Image to show the fail screen buttons and final score](assets/readme-images/failbuttons.png)
+## Future Enhancements
+- One thing that I would love to add in the future is more cars to make the game more challenging.
+- I would like to add more game modes where there is differnt car types to choose from ie, supercars, sportscars and hypercar categories so that it tests the users car knowledge even more as a lot of cars in the same category can be similarly matched.
+- I could also add different game modes for the different stats about cars such as the weight of the car, miles per galon, 0-60mph time and amount of cars produced.
+- Currently the game continues until the user inputs a wrong answer, I could setup something so that the user gets 3 lives in each 24 hour period, they can continue to play by using a life to keep their score however, once they are out of lives they must wait 24 hours to refresh their lives or they can pay to add more lives to allow them to carry on and play.
+ - Alongside this option to add lives and a payable option I would create a leaderboard section where the users can see a display of the all time leaderboard diplaying the highest scores and how many lives have been used to get that score.
+ - I would need to create a section where the user has to input a display username to display next to their score on the leaderboard.
+- I could create a light and dark mode selector for the site so that the user can select if they want a darker colour scheme or lighter colour scheme.
+## Testing 
+### W3 Validators and Lighthouse score
+- Just like in my previous project I have used these validators throughout to check my code for errors.
+#### HTML Validation
+- The HTML Validator shows some errors as I have empty 'src' for my img elements in the game section code as this is targetted by the javascript which pics a random car and implements the image file path to display the correct car image with the respective details.
+![Image to show the HTML Validation]()
+#### CSS Validation
+- There were no issues with my CSS on this project.
+![Image to show the css validation](assets/readme-images/cssvalidation.png)
+#### Lighthouse Score
+- The lighthouse score for this project is almost perfect!
+![Image to show the lighthouse score](assets/readme-images/lighthousescore.png)
+### JS Hint
+- I have used JS Hint throughout my project as it has highlighted missing colons, apostrophies, backwards ticks etc where I otherwise would not have noticed.
+- As my project consists of 2 javascript files to keep it easy to read and tidy I have added both files into the JS Hint to check. The below image shows the metrics.
+![Image showing the configure on JS Hint](assets/readme-images/jshintmetrics.png)
 

@@ -1,8 +1,6 @@
 // DOM elements for deciding which game to open
 const mainMenu = document.getElementById("main-menu");
 const gameScreen = document.getElementById("game-screen");
-const gameButton = document.querySelectorAll(".game-btn");
-const gameContent = document.querySelectorAll(".game-content");
 const gameMenu = document.getElementById('game-end-menu');
 const finalScore = document.getElementById('final-score');
 const highScoreDisplay = document.getElementById('high-score');
@@ -194,6 +192,6 @@ document.getElementById('play-again-btn').addEventListener('click', () => {
 });
 document.getElementById('main-menu-btn').addEventListener('click', () => {
     exitToMainMenu();
-})
+});
 
 
