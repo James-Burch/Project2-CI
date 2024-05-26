@@ -22,9 +22,8 @@
                 <!-- Description of what the website is for -->
                 <div class="description">
                     <h2>What is High Octane?</h2>
-                    <p>High Octane is a simple game for car lovers to test their knowledge of different car make and
-                        models
-                        power and performance figures.</p>
+                    <p>High Octane is a game created by a car enthusiast with the goal to create a fun mini game to test
+                        car lovers knowledge of fun statistics of many supercars. ENJOY!</p>
                 </div>
             </section>
             <!-- Explanation of how to play the 3 games -->
@@ -36,42 +35,45 @@
                     <span id="close-btn"><i class="fa-solid fa-xmark"></i></span>
                     <div class="htp-text">
                         <h2>How to play:</h2>
-                        <p>To play the higher or lower games simply look at the car on the right and decide if you
-                            believe
-                            it to
-                            have more or less power or 0-60mph time than the car on the left, if you think higher select
-                            the
-                            higher button or lower select the lower button, if you are correct the game will continue
-                            and
-                            you
-                            will then have to guess if the next car is higher or lower than the last.
-                            For the game guessing the bhp simple enter a whole number between 1 and 1000 and click
-                            submit
-                            (or
-                            enter on a computer). If you are within 10bhp then you will get the answer correct, if you
-                            are
-                            further than 10bhp from the answer it will prompt you to guess higher or lower.
+                        <br>
+                        <p>Well it's simple really, choose a game the same way you opened this 'how to play
+                            section' by clicking on 1 of the 3 games of your choice.
+                        </p>
+                        <br>
+                        <p>Once the game is open the game will display 2 random cars it will display one cars
+                            power/speed/price and hide the other cars.
+                        </p>
+                        <br>
+                        <p>Next decide if you think the car with the hidden information will be higher or lower than the
+                            car that you can see and press on the higher or lower button in the center of the screen.
                         </p>
                     </div>
                 </div>
-            </section>
-             <!-- Dispay current and highest score -->
-             <section class="high-score">
+                 <!-- Dispay current and highest score -->
+            <div class="high-score">
                 <p id="high-score">High Score: </p>
+            </div>
             </section>
+           
             <!-- Game selection section -->
             <section id="game-area">
                 <button id="game-btn-bhp" data-game="power-game" class="bhp-game game-box game-btn"
                     aria-label="Click me to play higher or lower break horse power game">
-                    <h3>Higher or lower bhp</h3>
+                    <div class="game-overlay">
+                        <h3>Higher or lower bhp</h3>
+                    </div>
                 </button>
                 <button id="game-btn-speed" data-game="topspeed-game" class="topspeed-game game-box game-btn"
                     aria-label="Click me to play higher or lower top speed game">
-                    <h3>Higher or lower top speed</h3>
+                    <div class="game-overlay">
+                        <h3>Higher or lower top speed</h3>
+                    </div>
                 </button>
                 <button id="game-btn-price" data-game="price-game" class="price-game game-box game-btn"
                     aria-label="Click me to play higher or lower car price game">
-                    <h3>Higher or lower price</h3>
+                    <div class="game-overlay">
+                        <h3>Higher or lower price</h3>
+                    </div>
                 </button>
             </section>
             <!-- Footer - displaying links to my linked in and github profiles -->
