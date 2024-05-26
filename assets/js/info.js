@@ -7,7 +7,7 @@ const cars = [
     { car: "Bugatti Chiron Super Sport 300+", carSpeed: "304", carPower: "1578", carPrice: "3850000", image: "assets/images/bugattichiron300ss.avif" },
     { car: "Koenigsegg Jesko Absolut", carSpeed: "330", carPower: "1600", carPrice: "3000000", image: "assets/images/koenigseggjeskoabsolut.avif" },
     { car: "Aston Martin Valkyrie", carSpeed: "250+", carPower: "1160", carPrice: "3000000", image: "assets/images/astonmartinvallkyrie.avif" },
-    { car: "Pagani Huayra BC", carSpeed: "238", carPower: "745", carPrice: "3400000", image: "assets/images/paganihuayrabc.avif" },
+    { car: "Pagani Huayra BC", carSpeed: "238", carPower: "745", carPrice: "3400000", image: "assets/images/paganihuayrabc.png" },
     { car: "Ferrari LaFerrari", carSpeed: "217", carPower: "950", carPrice: "1500000", image: "assets/images/laferrari.avif" },
     { car: "Lamborghini Huracán Performante", carSpeed: "201", carPower: "640", carPrice: "274390", image: "assets/images/lambohuracanperf.avif" },
     { car: "Porsche 918 Spyder", carSpeed: "211", carPower: "887", carPrice: "845000", image: "assets/images/porsche918spyder.avif" },
