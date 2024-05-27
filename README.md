@@ -1,6 +1,6 @@
 # High Octane
 ## Site Introduction
-High Octane is a fun game site for car lovers to test their knowledge on 3 different car stats. The website has been made as I love cars personally and wanted to join my 2 passions. The users of the website will be able to easily navigate the website as I have used pointers and enlarging buttons to prompt the user to click to start the game.
+High Octane is a fun game site for car lovers to test their knowledge on 3 different car stats. The website has been made as I love cars personally and wanted to join my 2 passions. Alternatively, users who do not know much about cars can use this game to learn about new cars, potentially see cars they did not even know existed! Maybe just maybe they will begin to share the same love as me for cars from playing my game.
 
 ![Image to show am I reponsive of my site](assets/readme-images/amiresponsive.png)
 ## Planning the website/game
