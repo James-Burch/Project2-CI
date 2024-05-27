@@ -23,7 +23,9 @@ h3 {
 button:hover {
     cursor: pointer;
 }
-
+.hide {
+    display: none;
+}
 #submit {
     width: 50%;
     padding: 5px;

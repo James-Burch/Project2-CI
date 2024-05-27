@@ -53,6 +53,8 @@ The idea for this screen was to display a funny image of a recognisable personal
 ![Image of the fail screen of my site](assets/readme-images/failscreen.png)
 ### JavaScript functions
 I have used many different javascript functions for my project, not only does the game run through the javascript but the actual display to open and close the different html elements is done through javascript event listeners. I have done this as I wanted to showcase my skills to use javascript and only use one HTML file. There will be a more detailed desription later in the readme file.
+#### Random car function
+I have used javascript to generate a random number to be used to select a car at random when the game is started and the user gets a correct answer. There is also a function which compares the cars to make sure the same car can never be chosen at the same time, if they are the same it will generate a new car until it is different. It then uses this information and inputs the random cars information into the HTML.
 #### Score Section
 The score area of the game screen uses javascript code to update when the user inputs a correct answer and track how many answers the user has guessed correctly, this score will continuesly update until a wrong answer has been input. I decided to display this in the corner of the screen so that it does not get in the way but is big enough to be seen and the user can track their current score.
 ![Image to show the score tracking section](assets/readme-images/scoretracker.png)
@@ -79,16 +81,29 @@ The score area of the game screen uses javascript code to update when the user i
 ### W3 Validators and Lighthouse score
 - Just like in my previous project I have used these validators throughout to check my code for errors.
 #### HTML Validation
-- The HTML Validator shows some errors as I have empty 'src' for my img elements in the game section code as this is targetted by the javascript which pics a random car and implements the image file path to display the correct car image with the respective details.
 ![Image to show the HTML Validation]()
 #### CSS Validation
-- There were no issues with my CSS on this project.
 ![Image to show the css validation](assets/readme-images/cssvalidation.png)
 #### Lighthouse Score
-- The lighthouse score for this project is almost perfect!
 ![Image to show the lighthouse score](assets/readme-images/lighthousescore.png)
 ### JS Hint
 - I have used JS Hint throughout my project as it has highlighted missing colons, apostrophies, backwards ticks etc where I otherwise would not have noticed.
 - As my project consists of 2 javascript files to keep it easy to read and tidy I have added both files into the JS Hint to check. The below image shows the metrics.
+
 ![Image showing the configure on JS Hint](assets/readme-images/jshintmetrics.png)
+
+## Bugs and Fixes
+- The first major bug that I ran into was that my javascript files were not loading in the correct order to load the info.js file before the script.js file so that the code trying to pull the cars from the array did not know where to pull it from. I figured out how to fix this when I was playing around with a playground repostiroy I made to help make this project as I would create each function individually and work out how to implement it, after looking at the 2 repositories I noticed that when I was linking the files to the HTML file I had the info.js linked on the line above the script.js file, I then mimicked this on my project and it fixed this issue.
+ - If these files were the other way around the game would not be able to work as it wouldn't know where to find the cars information and image file path.
+![Image to show the code I have referenced in this fix](assets/readme-images/scriptlinks.png)
+- I originally started with completely differnt javascript functions as I did not know how to plan ahead, so I had the game selection buttons set up to display an individual screen to each game mode, this meant that I had 3 different HTML sections for each game screen display. Once I got further into the project and creating the startGame function I realised that my code was going to get very messy as I would need to have 3 different functions for each game mode.
+Once I released that this was going to get very messy I started to rework my code to what it is now, it had reduced the size of the code substantially whilst maintaining the function, the new code uses 'else' and 'if' statements to query what game mode the user has input, it will then check what details it needs to input into the HTML game section.
+This also allows for future enhancements to be made as I can easily add more game types by adding the relevant 'else' and 'if' statements to query if the new game has been selected or not.
+![Image to show the relevant JS code explained in this section](assets/readme-images/refinedjscode.png)
+- Whilst writing my readme.md file, specifically running my project through the validators there were some issues highlighted to me by the W3 HTML Validator such as:
+ - The H1 element was located in the wrong place on the page and throwing up and error, I sorted this by changing my main element to only enclose the main menu content and removed the section with id="main-menu" and moved the id selector to the '<main>' element, this has now removed the error.
+ ![Image to show the rearranged code](assets/readme-images/h1rectified.png)
+ - I had a small issue with getting my high score element to work, I had written the code that was correct orignally however it did not work... After investigation and talking it through with my mentor Alan I soon realised why it was not working, it was as simple as I had different id selectors in the HTML to what I was linking the function too in my JS file. This was a quick easy fix but something that I was not able to notice until looking through my project with a second pair of eyes.
+ - My original images were extremely poor quality so I decided to spend some time going through looking on google for high resolution car images to use to create a better UX.
+ - I had a bug where the game function did not work properly to begin with when I revised the code, when the game started it selected 2 random cars and displayed them however when the user inputted higher or lower it would reset and select 2 new cars, I realised that I had called the startGame function in the wrong area which was causing this to happen, once I had removed this code the game function worked perfectly how it was intended.
 

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords"
         content="higher or lower, game, car game, higher or lower game, high octane, car higher or lower game, guessing game, fun game, simple game">
-    <meta name="description" content="High Octane is a fun higher or lower guessing game perfect for car lovers to test their knowledge of exotic cars">
+    <meta name="description"
+        content="High Octane is a fun higher or lower guessing game perfect for car lovers to test their knowledge of exotic cars">
     <!-- Link css stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Link to fontawesome -->
@@ -18,12 +19,9 @@
 
 <body>
     <!-- Main menu section/home page -->
-    <main>
-        <section id="main-menu">
+    <main id="main-menu">
+            <h1 id="heading">High Octane</h1>
             <section>
-                <div id="heading">
-                    <h1>High Octane</h1>
-                </div>
                 <!-- Description of what the website is for -->
                 <div class="description">
                     <h2>What is High Octane?</h2>
@@ -62,24 +60,19 @@
 
             <!-- Game selection section -->
             <section id="game-area">
-                <button id="game-btn-bhp" data-game="power-game" class="bhp-game game-box game-btn"
+                <h3 class="hide">Game Area</h3>
+                <div id="game-btn-bhp" data-game="power-game" class="bhp-game game-box game-btn"
                     aria-label="Click me to play higher or lower break horse power game">
-                    <div class="game-overlay">
-                        <h3>Higher or lower bhp</h3>
-                    </div>
-                </button>
-                <button id="game-btn-speed" data-game="topspeed-game" class="topspeed-game game-box game-btn"
+                    <h3 class="game-overlay">Higher or lower bhp</h3>
+                </div>
+                <div id="game-btn-speed" data-game="topspeed-game" class="topspeed-game game-box game-btn"
                     aria-label="Click me to play higher or lower top speed game">
-                    <div class="game-overlay">
-                        <h3>Higher or lower top speed</h3>
-                    </div>
-                </button>
-                <button id="game-btn-price" data-game="price-game" class="price-game game-box game-btn"
+                    <h3 class="game-overlay">Higher or lower top speed</h3>
+                </div>
+                <div id="game-btn-price" data-game="price-game" class="price-game game-box game-btn"
                     aria-label="Click me to play higher or lower car price game">
-                    <div class="game-overlay">
-                        <h3>Higher or lower price</h3>
-                    </div>
-                </button>
+                    <h3 class="game-overlay">Higher or lower price</h3>
+                </div>
             </section>
             <!-- Footer - displaying links to my linked in and github profiles -->
             <footer>
@@ -99,10 +92,12 @@
                     </div>
                 </div>
             </footer>
-        </section>
+        </main>
         <section class="game-screen" id="game-screen">
+            <h3 class="hide">Game Screen</h3>
             <section id="prev-car">
-                <img src="" alt="Car image">
+                <h3 class="hide">Previous Car</h3>
+                <img src="placeholder" alt="Car image">
                 <div class="overlay">
                     <!-- Name of the car will be inserted here when the game is started -->
                     <p></p>
@@ -112,7 +107,8 @@
             </section>
             <p id="score">Score: 0</p>
             <section id="next-car">
-                <img src="" alt="Car image">
+                <h3 class="hide">Next Car</h3>
+                <img src="placeholder" alt="Car image">
                 <div class="overlay">
                     <p></p>
                     <p class="power"></p>
@@ -123,14 +119,15 @@
         </section>
         <!-- Wrong answer menu to access main menu or play again -->
         <nav id="game-end-menu" class="game-end-menu">
-            <img id="game-end-img" src="assets/images/jeremyclarksonimage.jpeg" alt="">
+            <h3 class="hide">Failed Screen</h3>
+            <img id="game-end-img" src="assets/images/jeremyclarksonimage.jpeg" alt="Image of Jeremy Clarkson disappointed">
             <div class="overlay-menu">
                 <p id="final-score"></p>
                 <button id="play-again-btn">Play Again</button>
                 <button id="main-menu-btn">Main Menu</button>
             </div>
         </nav>
-    </main>
+    
     <!-- Link JavaScript files -->
     <script src="assets/js/info.js"></script>
     <script src="assets/js/script.js"></script>
