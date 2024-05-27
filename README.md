@@ -119,6 +119,7 @@ The score area of the game screen uses javascript code to update when the user i
 | Random Car function | Play game | Display a different car everytime | Pass |
 | Check responsiveness | Check every page on each screen size | Every page be readable and easy to navigate | Pass |
 | Test website displays well on other browsers | Open my link on other browsers | Website will look good on each browser | Pass |
+| Wrong answer menu | Purposefully answer wrong in the game | Display the final score, play again and main menu button | Pass|
 
 ## Bugs and Fixes
 - The first major bug that I ran into was that my javascript files were not loading in the correct order to load the info.js file before the script.js file so that the code trying to pull the cars from the array did not know where to pull it from. I figured out how to fix this when I was playing around with a playground repostiroy I made to help make this project as I would create each function individually and work out how to implement it, after looking at the 2 repositories I noticed that when I was linking the files to the HTML file I had the info.js linked on the line above the script.js file, I then mimicked this on my project and it fixed this issue.

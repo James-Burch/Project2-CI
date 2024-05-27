@@ -26,8 +26,6 @@ let score = 0;
 let prevCar;
 let nextCar;
 let highScore = 0;
-// let prevCar = getRandomCar();
-// let nextCar = getRandomCarExcluding(prevCar);
 let currentGame = 1;
 // Generate random number
 function getRandomCar() {
@@ -84,7 +82,6 @@ function updateGame() {
     displayCar(cars[prevCar], document.getElementById('prev-car'));
     displayCar(cars[nextCar], document.getElementById('next-car'));
     updateScore();
-    console.log(updateScore);
 }
 // Create start game function
 function startGame() {
