@@ -70,7 +70,7 @@ The score area of the game screen uses javascript code to update when the user i
 - I have displayed these buttons in the middle of the screen for all screen sizes between each car to make it obvious to the user that they are selecting higher or lower between the 2 displayed cars.
 
 ![Image to show the higher or lower buttons](assets/readme-images/higherorlowerbtn.png)
-- I have used consistent CSS to style the buttons and score display throughout my page, I beleive this creates a better overall user experience.
+- I have used consistent CSS to style the buttons and score display throughout my page, I believe this creates a better overall user experience.
 #### Fail screen buttons
 - The fail screen buttons have 2 options, one to play again and restart the same game and second one to allow the user to return to the main menu.
  - Play again: This button has an event listener attached so that when the button is clicked it activates the code to start the game over and reset the score, this then displays the game screen again.
@@ -78,6 +78,10 @@ The score area of the game screen uses javascript code to update when the user i
 - The screen also displays the final score from the game that the user has just played.
 
 ![Image to show the fail screen buttons and final score](assets/readme-images/failbuttons.png)
+### Footer
+-  I have added a 'Built by James Burch' with my linked in and github links into the footer of the site as I would like for people who visit to be able to find me and see the other work that I have done.
+
+![Image to show footer](assets/readme-images/footer.png)
 ## Future Enhancements
 - One thing that I would love to add in the future is more cars to make the game more challenging.
 - I would like to add more game modes where there is differnt car types to choose from ie, supercars, sportscars and hypercar categories so that it tests the users car knowledge even more as a lot of cars in the same category can be similarly matched.
@@ -91,7 +95,7 @@ The score area of the game screen uses javascript code to update when the user i
 - Just like in my previous project I have used these validators throughout to check my code for errors.
 #### HTML Validation
 
-![Image to show the HTML Validation]()
+![Image to show the HTML Validation](assets/readme-images/htmlvalidationw3.png)
 #### CSS Validation
 
 ![Image to show the css validation](assets/readme-images/cssvalidation.png)
@@ -151,7 +155,7 @@ Link to the live site : <a href="https://james-burch.github.io/Project2-CI/" rel
 ## Credits
 - Thanks to Alan my mentor for guiding me throughout this project and helping me find the source of the errors and bugs in my code and not just giving me a fix for it straight away.
 - Thanks to my fellow students who have been kind enough to give pointers with my code and help me with some errors along the way.
-- All of the images were sourced from Google or free sites for people to share their images in high resolution.
+- All of the images were sourced from Google or free sites for people to share their images in high resolution (gettyimages is where the majority were sourced from).
 - Chat GPT was used to create a list of super cars and assign the correct power, price and topspeed to save myself time having to research and input each car individually.
 - I used W3 schools to help with some javascript code to get the basic structure it needed to be written in so that I could tailor it to my needs.
 - All of the HTML, CSS and functional JS was written by myself, the info.js array as mentioned had all of the correct info dded by ChatGPT for speed, but it did not write any of my code.

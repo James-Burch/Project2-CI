@@ -24,7 +24,7 @@ const cars = [
     { car: "Koenigsegg Regera", carSpeed: "255", carPower: "1500", carPrice: "2100000", image: "assets/images/koenigseggregera.jpeg" },
     { car: "Aston Martin One-77", carSpeed: "220", carPower: "750", carPrice: "1800000", image: "assets/images/astonmartinone77.jpeg" },
     { car: "Rimac Concept_One", carSpeed: "221", carPower: "1224", carPrice: "980000", image: "assets/images/rimacconcept1.jpeg" },
-    { car: "Pagani Huayra Roadster BC", carSpeed: "230", carPower: "800", carPrice: "3500000", image: "assets/images/paganihuayraroadster.jpeg" },
+    { car: "Pagani Huayra Roadster BC", carSpeed: "230", carPower: "800", carPrice: "3500000", image: "assets/images/paganihuayrabc.jpeg" },
     { car: "Ferrari 488 Pista", carSpeed: "211", carPower: "720", carPrice: "331000", image: "assets/images/ferrari488pista.jpeg" },
     { car: "Lamborghini Veneno", carSpeed: "221", carPower: "750", carPrice: "4500000", image: "assets/images/lamborghiniveneno.jpeg" },
     { car: "Porsche Carrera GT", carSpeed: "205", carPower: "612", carPrice: "448000", image: "assets/images/porschecarreragt.jpeg" },
@@ -39,7 +39,7 @@ const cars = [
     { car: "McLaren GT", carSpeed: "203", carPower: "612", carPrice: "210000", image: "assets/images/mclarengt.jpeg" },
     { car: "Bugatti Bolide", carSpeed: "310+", carPower: "1850", carPrice: "4000000", image: "assets/images/bugattibolide.jpeg" },
     { car: "Koenigsegg CCX", carSpeed: "245", carPower: "806", carPrice: "695000", image: "assets/images/koenigseggccxr.jpeg" },
-    { car: "Aston Martin DB11 AMR", carSpeed: "208", carPower: "630", carPrice: "241000", image: "assets/images/astonmartindb11amr.jpeg" }
+    { car: "Aston Martin DB11 AMR", carSpeed: "208", carPower: "630", carPrice: "241000", image: "assets/images/db11amr.jpeg" }
 ];
 
 

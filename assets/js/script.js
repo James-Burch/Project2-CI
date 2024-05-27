@@ -128,7 +128,7 @@ function exitToMainMenu() {
 document.getElementById('higher-btn').addEventListener('click', () => {
     
     if (currentGame === 1) {
-        if (Number(cars[nextCar].carPower) > Number(cars[prevCar].carPower)) {
+        if (Number(cars[nextCar].carPower) >= Number(cars[prevCar].carPower)) {
         score++;
         prevCar = nextCar;
         nextCar = getRandomCarExcluding(prevCar);
@@ -137,7 +137,7 @@ document.getElementById('higher-btn').addEventListener('click', () => {
         endGame();
     }
 } else if (currentGame === 2) {
-    if (Number(cars[nextCar].carSpeed) > Number(cars[prevCar].carSpeed)) {
+    if (Number(cars[nextCar].carSpeed) >= Number(cars[prevCar].carSpeed)) {
     score++;
     prevCar = nextCar;
     nextCar = getRandomCarExcluding(prevCar);
@@ -146,7 +146,7 @@ document.getElementById('higher-btn').addEventListener('click', () => {
     endGame();
 }
 } else {
-    if (Number(cars[nextCar].carPrice) > Number(cars[prevCar].carPrice)) {
+    if (Number(cars[nextCar].carPrice) >= Number(cars[prevCar].carPrice)) {
         score++;
         prevCar = nextCar;
         nextCar = getRandomCarExcluding(prevCar);
@@ -158,7 +158,7 @@ document.getElementById('higher-btn').addEventListener('click', () => {
 });
 document.getElementById('lower-btn').addEventListener('click', () => {
     if (currentGame === 1) {
-        if (Number(cars[nextCar].carPower) < Number(cars[prevCar].carPower)) {
+        if (Number(cars[nextCar].carPower) <= Number(cars[prevCar].carPower)) {
         score++;
         prevCar = nextCar;
         nextCar = getRandomCarExcluding(prevCar);
@@ -167,7 +167,7 @@ document.getElementById('lower-btn').addEventListener('click', () => {
         endGame();
     }
 } else if (currentGame === 2) {
-    if (Number(cars[nextCar].carSpeed) < Number(cars[prevCar].carSpeed)) {
+    if (Number(cars[nextCar].carSpeed) <= Number(cars[prevCar].carSpeed)) {
         score++;
         prevCar = nextCar;
         nextCar = getRandomCarExcluding(prevCar);
@@ -176,7 +176,7 @@ document.getElementById('lower-btn').addEventListener('click', () => {
         endGame();
     }
 } else {
-    if (Number(cars[nextCar].carPrice) < Number(cars[prevCar].carPrice)) {
+    if (Number(cars[nextCar].carPrice) <= Number(cars[prevCar].carPrice)) {
         score++;
         prevCar = nextCar;
         nextCar = getRandomCarExcluding(prevCar);
